@@ -41,10 +41,10 @@ public class NavigationController implements Serializable {
 		if(pageId==null){
 			return "index";
 		}
-		if (pageId.equals("byDate")){
-			return "byDateDisplay";
-		}
-		else if(pageId.equals("showAllFlights")){
+//		if (pageId.equals("byDate")){
+//			return "byDateDisplay";
+//		}
+		if(pageId.equals("showAllFlights")){
 			return "displayFlightInfo";
 		}
 		else if(pageId.equals("byAirline")){

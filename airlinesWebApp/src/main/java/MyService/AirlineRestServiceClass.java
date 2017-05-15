@@ -34,7 +34,9 @@ public class AirlineRestServiceClass {
 	public AirlineRestServiceClass(){
 		
 	}
-	
+	//1. the url given in the path is used to set the airline property for the new airline object
+	//2. The Http method used is POST to create a new Airline object
+	//3. the response message is XML format
 	@Path("/createAirline/{airlineName}")
 	@POST
 	@Produces({"application/xml","application/json"})
@@ -44,7 +46,10 @@ public class AirlineRestServiceClass {
 		airlineService.create(airline);
 		return airline;
 	}
-		
+	
+	//1. the url given in the path is used to find all the airlines
+	//2. The Http method used is GET to get all the airline objects
+	//3. the response message is XML format
 	@Path("/findAll")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -54,7 +59,10 @@ public class AirlineRestServiceClass {
 	
 		return airlines;
 	}
-
+	
+	//1. the url given in the path is used to delete the airline object with the given property
+	//2. The Http method used is DELETE to delete the Airline object
+	//3. the response message is XML format
 	@Path("/deleteAirline/{airlineName}/id/{id}")
 	@DELETE
 	@Produces({"application/xml","application/json"})
@@ -71,7 +79,10 @@ public class AirlineRestServiceClass {
 		
 		return airline;
 	}
-
+	
+	//1. the url given in the path is used to update the airline property for the airline object
+	//2. The Http method used is UPDATE to update the Airline object
+	//3. the response message is XML format
 	@Path("/updateAirline/id/{id}/airlineName/{airlineName}")
 	@PUT
 	@Produces({"application/xml","application/json"})
@@ -89,6 +100,9 @@ public class AirlineRestServiceClass {
 		return airline;
 	}
 	
+	//1. the url given in the path is used to get the airline object by the given property
+	//2. The Http method used is GET to get the required Airline object
+	//3. the response message is XML format
 	@Path("/findAirline/{airlineName}")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -104,15 +118,18 @@ public class AirlineRestServiceClass {
 		return airline;
 	}
 	
-	@Path("/findAirlineByObject")
+	/*@Path("/findAirlineByObject")
 	@PUT
 	@Produces({"application/xml","application/json"})
 	@Consumes({"application/xml","application/json"})
 	public Airline findAirlineByAirlineObject(Airline airline){
 		
 		return airlineService.find(airline);
-	}
+	}*/
 	
+	//1. the url given in the path is used to get the airline object by the given property
+	//2. The Http method used is GET to get the required Airline object
+	//3. the response message is XML format
 	@Path("/findAirlineByFlight/{flightNo}")
 	@GET
 	@Produces({"application/xml","application/json"})

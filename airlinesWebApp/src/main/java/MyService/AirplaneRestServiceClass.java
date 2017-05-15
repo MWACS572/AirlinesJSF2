@@ -31,6 +31,9 @@ public class AirplaneRestServiceClass  {
 		
 	}
 	
+	//1. the url given in the path is used to set the airplane property for the new airline object
+	//2. The Http method used is POST to create a new Airplane object
+	//3. the response message is XML format
 	@Path("/createAirplane/model/{model}/serialnr/{nr}/capacity/{ca}")
 	@POST
 	@Produces({"application/xml","application/json"})
@@ -42,7 +45,10 @@ public class AirplaneRestServiceClass  {
 		airplaneService.create(airplane);
 		return airplane;
 	}
-		
+	
+	//1. the url given in the path is used to find all the Airplane objects
+	//2. The Http method used is GET to get all the Airplane objects
+	//3. the response message is XML format
 	@Path("/findAll")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -52,7 +58,10 @@ public class AirplaneRestServiceClass  {
 	
 		return airplane;
 	}
-
+	
+	//1. the url given in the path is used to delete the airplane object with the given property
+	//2. The Http method used is DELETE to delete the Airplane object
+	//3. the response message is XML format
 	@Path("/deleteAirplane/id/{id}/serialnr/{nr}/model/{model}/capacity/{ca}")
 	@DELETE
 	@Produces({"application/xml","application/json"})
@@ -72,7 +81,10 @@ public class AirplaneRestServiceClass  {
 		
 		return airplane;
 	}
-
+	
+	//1. the url given in the path is used to update the airplane property for the airplane object
+	//2. The Http method used is UPDATE to update the Airplane object
+	//3. the response message is XML format
 	@Path("/updateAirplane/id/{id}/serialnr/{nr}/model/{model}/capacity/{ca}")
 	@PUT
 	@Produces({"application/xml","application/json"})
@@ -92,7 +104,7 @@ public class AirplaneRestServiceClass  {
 		return airplane;
 	}
 	
-	@Path("/findAirplaneByObject")
+/*	@Path("/findAirplaneByObject")
 	@PUT
 	@Produces({"application/xml","application/json"})
 	@Consumes({"application/xml","application/json"})
@@ -100,8 +112,11 @@ public class AirplaneRestServiceClass  {
 		
 		return airplaneService.find(airplane);
 	}
+	*/
 	
-	
+	//1. the url given in the path is used to get the airplane object for the given property
+	//2. The Http method used is GET to get the required Airplane object
+	//3. the response message is XML format
 	@Path("/findAirplane/model/{model}")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -119,7 +134,9 @@ public class AirplaneRestServiceClass  {
 	}
 	
 	
-	
+	//1. the url given in the path is used to get the airplane object for the given property
+	//2. The Http method used is GET to get the required Airplane object
+	//3. the response message is XML format
 	@Path("/findAirplaneByFlight/{flightNo}")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -137,6 +154,9 @@ public class AirplaneRestServiceClass  {
 		return airplaneList;
 	}
 	
+	//1. the url given in the path is used to get the airplane object for the given property
+	//2. The Http method used is GET to get the required Airplane object
+	//3. the response message is XML format
 	@Path("/findAirplaneByserialnr/{serialnr}")
 	@GET
 	@Produces({"application/xml","application/json"})

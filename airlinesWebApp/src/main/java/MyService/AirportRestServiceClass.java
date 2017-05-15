@@ -46,8 +46,8 @@ public class AirportRestServiceClass {
 		return airport;
 	}
 	
-	//1. the url given in the path finds all Airports
-	//2. The Http method used is GET to get all the airports objects
+	//1. the url given in the path finds all Airport objects
+	//2. The Http method used is GET to get all the airport objects
 	//3. the response message is XML format
 	@Path("/findAll")
 	@GET
@@ -125,15 +125,18 @@ public class AirportRestServiceClass {
 	}
 	
 	
-	@Path("/findAirportByObject")
+	/*@Path("/findAirportByObject")
 	@PUT
 	@Produces({"application/xml","application/json"})
 	@Consumes({"application/xml","application/json"})
 	public Airport findAirportByAirportObject(Airport airport){
 		
 		return airportService.find(airport);
-	}
+	}*/
 	
+	//1. the url given in the path is used to get the Airport object for the given property
+	//2. The Http method used is GET to get the required Airport object
+	//3. the response message is XML format
 	@Path("/findAirportByArrivalFlight/{flightNo}")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -151,6 +154,9 @@ public class AirportRestServiceClass {
 		return airportList;
 	}
 	
+	//1. the url given in the path is used to get the Airport object for the given property
+	//2. The Http method used is GET to get the required Airport object
+	//3. the response message is XML format
 	@Path("/findAirportByDepartureFlight/{flightNo}")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -168,6 +174,9 @@ public class AirportRestServiceClass {
 		return airportList;
 	}
 	
+	//1. the url given in the path is used to get the Airport object for the given property
+	//2. The Http method used is GET to get the required Airport object
+	//3. the response message is XML format
 	@Path("/findAirportByAirportcode/{code}")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -184,6 +193,9 @@ public class AirportRestServiceClass {
 		return airportList;
 	}
 	
+	//1. the url given in the path is used to get the Airport object for the given property
+	//2. The Http method used is GET to get the required Airport object
+	//3. the response message is XML format
 	@Path("/findAirportByAirportCity/{city}")
 	@GET
 	@Produces({"application/xml","application/json"})
@@ -200,6 +212,9 @@ public class AirportRestServiceClass {
 		return airportList;
 	}
 	
+	//1. the url given in the path is used to get the Airport object for the given property
+	//2. The Http method used is GET to get the required Airport object
+	//3. the response message is XML format
 	@Path("/findAirportByAirportCountry/{country}")
 	@GET
 	@Produces({"application/xml","application/json"})

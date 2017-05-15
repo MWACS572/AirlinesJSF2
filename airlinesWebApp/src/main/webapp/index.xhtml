@@ -15,41 +15,41 @@
     <h:body>
 		<h:form>
 			
-			<h:commandLink action ="#{navigationController.showPage}" value=" Main ">
+			<h:commandLink action ="#{navigationController.showPage()}" value=" Main ">
 				<f:param name="pageId" value="index" />
 			</h:commandLink>
-			<h:commandLink action ="#{navigationController.showPage}" value="| Show All Flights ">
+			<h:commandLink action ="#{navigationController.showPage()}" value="| Show All Flights ">
 				<f:param name="pageId" value="showAllFlights" />
 			</h:commandLink>
 			
-			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Flight by Day/Time ">
+			<!-- <h:commandLink action="#{navigationController.showPage()}" value="| Retrieve Flight by Day/Time ">
 				<f:param name="pageId" value="byDate" />
-			</h:commandLink>
-			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Flgiht by Airline ">
+			</h:commandLink> -->
+			<h:commandLink action="#{navigationController.showPage()}" value="| Retrieve Flgiht by Airline ">
 				<f:param name="pageId" value="byAirline" />
 			</h:commandLink>
-			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Fligth by Origin ">
+			<h:commandLink action="#{navigationController.showPage()}" value="| Retrieve Fligth by Origin ">
 				<f:param name="pageId" value="byOrigin" />
 			</h:commandLink>
 			
-			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Flight by Destination">
+			<h:commandLink action="#{navigationController.showPage()}" value="| Retrieve Flight by Destination">
 				<f:param name="pageId" value="byDestination" />
 			</h:commandLink>
 			<br />
 			<br />
-			<h:commandLink action="#{navigationController.showPage}" value="Create Airline">
+			<h:commandLink action="#{navigationController.showPage()}" value="Create Airline">
 				<f:param name="pageId" value="createNewAirline" />
 			</h:commandLink>
 			
-			<h:commandLink action="#{navigationController.showPage}" value="| List All Airlines">
+			<h:commandLink action="#{navigationController.showPage()}" value="| List All Airlines">
 				<f:param name="pageId" value="listAirlines" />
 			</h:commandLink>
 				
-			<h:commandLink action="#{navigationController.showPage}" value="| Update Airline">
+			<h:commandLink action="#{navigationController.showPage()}" value="| Update Airline">
 				<f:param name="pageId" value="updateAirline" />
 			</h:commandLink>
 			
-			<h:commandLink action="#{navigationController.showPage}" value="| Delete Airline">
+			<h:commandLink action="#{navigationController.showPage()}" value="| Delete Airline">
 				<f:param name="pageId" value="deleteAirline" />
 			</h:commandLink>	
 				
