@@ -326,8 +326,8 @@ public class AirportDao {
 			
 			tx = entityManager.getTransaction();
 			tx.begin();
-			
-			airports = entityManager.createQuery("from airports", Airport.class).getResultList();
+			airports = entityManager.createQuery("from Airport", Airport.class).getResultList();
+			//airports = entityManager.createQuery("from airports", Airport.class).getResultList();
 
 			tx.commit();
 			

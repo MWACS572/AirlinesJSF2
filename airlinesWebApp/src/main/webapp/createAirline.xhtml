@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+ 	xmlns:f="http://java.sun.com/jsf/core">
+ 	
+ 	<f:metadata>
+   		<f:viewParam name="pageId" value="#{navigationController.pageId}"/> 
+	</f:metadata>
+ 	
+    <h:head>
+        <title>Create Airline</title>
+    </h:head>
+    <h:body>
+    
+    	<h2>Enter the Airline Name to Create a New Airline</h2>
+    	<h:form>
+    		<h:inputText value="#{airline.name}"/>
+    		<br />
+    		<br />
+    		<h:commandButton value="Create Airline" action="#{navigationForAirline.createAirline(airline)}"/>
+    	</h:form>
+	</h:body>		
+</html>

@@ -42,6 +42,7 @@ public class Flight {
 
 	/* Constructors */
 	public Flight() {
+		
 	}
 
 	public Flight(String flightnr, String departureDate, String departureTime,

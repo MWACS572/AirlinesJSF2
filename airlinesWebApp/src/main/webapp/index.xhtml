@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+ 	xmlns:f="http://java.sun.com/jsf/core">
+ 	
+ 	<f:metadata>
+   		<f:viewParam name="pageId" value="#{navigationController.pageId}"/> 
+	</f:metadata>
+ 	
+    <h:head>
+        <title>Main Menu</title>
+    </h:head>
+    <h:body>
+		<h:form>
+			
+			<h:commandLink action ="#{navigationController.showPage}" value=" Main ">
+				<f:param name="pageId" value="index" />
+			</h:commandLink>
+			<h:commandLink action ="#{navigationController.showPage}" value="| Show All Flights ">
+				<f:param name="pageId" value="showAllFlights" />
+			</h:commandLink>
+			
+			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Flight by Day/Time ">
+				<f:param name="pageId" value="byDate" />
+			</h:commandLink>
+			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Flgiht by Airline ">
+				<f:param name="pageId" value="byAirline" />
+			</h:commandLink>
+			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Fligth by Origin ">
+				<f:param name="pageId" value="byOrigin" />
+			</h:commandLink>
+			
+			<h:commandLink action="#{navigationController.showPage}" value="| Retrieve Flight by Destination">
+				<f:param name="pageId" value="byDestination" />
+			</h:commandLink>
+			<br />
+			<br />
+			<h:commandLink action="#{navigationController.showPage}" value="Create Airline">
+				<f:param name="pageId" value="createNewAirline" />
+			</h:commandLink>
+			
+			<h:commandLink action="#{navigationController.showPage}" value="| List All Airlines">
+				<f:param name="pageId" value="listAirlines" />
+			</h:commandLink>
+				
+			<h:commandLink action="#{navigationController.showPage}" value="| Update Airline">
+				<f:param name="pageId" value="updateAirline" />
+			</h:commandLink>
+			
+			<h:commandLink action="#{navigationController.showPage}" value="| Delete Airline">
+				<f:param name="pageId" value="deleteAirline" />
+			</h:commandLink>	
+				
+		</h:form>
+    </h:body>
+</html>

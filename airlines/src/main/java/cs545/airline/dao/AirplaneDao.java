@@ -232,8 +232,8 @@ public class AirplaneDao {
 			
 			tx = entityManager.getTransaction();
 			tx.begin();
-			
-			airplanes = entityManager.createQuery("from airplanes", Airplane.class).getResultList();
+			airplanes = entityManager.createQuery("from Airplane", Airplane.class).getResultList();
+			//airplanes = entityManager.createQuery("from airplanes", Airplane.class).getResultList();
 
 			tx.commit();
 			
